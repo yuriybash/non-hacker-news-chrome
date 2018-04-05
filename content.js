@@ -30,7 +30,7 @@ function filter_hn_stories(filter_level) {
         data: titles_urls
     }, function(response) {
 
-        let threshold = get_threshold(filter_level);
+        const threshold = get_threshold(filter_level);
         let things = document.getElementsByClassName('athing')
 
         for (var i = 0; i < things.length; i++) {
