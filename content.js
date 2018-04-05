@@ -49,7 +49,7 @@ chrome.runtime.onMessage.addListener(function(msg, sender, response) {
             filter_hn_stories(parseInt(msg.filter_level));
         } else if (msg.subject === 'reset') {
             let things = document.getElementsByClassName('athing');
-            for (var i = 0; i < things.length; i++) {
+            for (let i = 0; i < things.length; i++) {
                 things[i].style.display = ''
             }
         }
