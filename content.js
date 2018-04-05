@@ -33,7 +33,7 @@ function filter_hn_stories(filter_level) {
         const threshold = get_threshold(filter_level);
         let things = document.getElementsByClassName('athing')
 
-        for (var i = 0; i < things.length; i++) {
+        for (let i = 0; i < things.length; i++) {
             if (response[i][1] <= threshold) {
                 things[i].style.display = 'none'
             }
