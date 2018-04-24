@@ -1,6 +1,6 @@
 'use strict';
 
-const predictor_endpoint = "https://si6k7q7byd.execute-api.us-east-1.amazonaws.com/dev"
+const predictor_endpoint = "https://si6k7q7byd.execute-api.us-east-1.amazonaws.com/dev";
 
 chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
   if ((msg.from === 'content') && (msg.subject === 'showPageAction')) {
