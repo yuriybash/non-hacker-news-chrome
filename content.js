@@ -43,7 +43,7 @@ function filter_hn_stories(filter_level) {
 }
 
 
-chrome.runtime.onMessage.addListener(function(msg, sender, response) {
+chrome.runtime.onMessage.addListener(function(msg) {
     if (msg.from === 'popup') {
         if (msg.subject === 'filterHN') {
             filter_hn_stories(parseInt(msg.filter_level));
