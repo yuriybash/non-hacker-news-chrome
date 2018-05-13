@@ -31,7 +31,7 @@ function filter_hn_stories(filter_level) {
     }, function(response) {
 
         const threshold = get_threshold(filter_level);
-        let things = document.getElementsByClassName('athing')
+        let things = document.getElementsByClassName('athing');
 
         for (let i = 0; i < things.length; i++) {
             if (response[i][1] <= threshold) {
