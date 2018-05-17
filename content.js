@@ -3,6 +3,7 @@ chrome.runtime.sendMessage({
     subject: 'showPageAction'
 });
 
+const DEFAULT_THING_STYLE = '';
 
 const get_threshold = function (f_level) {return 0.03354 * f_level - 0.06227};
 
@@ -28,11 +29,7 @@ function filter_hn_stories(filter_level) {
         let things = document.getElementsByClassName('athing');
 
         for (let i = 0; i < things.length; i++) {
-            if (response[i][1] <= threshold) {
-                things[i].style.display = 'none'
-            } else {
-                things[i].style.display = ''
-            }
+            things[i].style.display = (response[i][1] <= threshold) ? 'none' : DEFAULT_THING_STYLE;
         }
     });
 
@@ -52,8 +49,10 @@ chrome.runtime.onMessage.addListener(function(msg) {
 
     if (msg.subject === 'reset') {
         let things = document.getElementsByClassName('athing');
-        for (let i = 0; i < things.length; i++) {
-            things[i].style.display = ''
+
+        for(let thing of things){
+            thing.style.display = DEFAULT_THING_STYLE
         }
+
     }
 });
