@@ -15,7 +15,6 @@ function filter_hn_stories(filter_level) {
         let title = story_link.text.replace(/[^a-zA-Z0-9 -]/, '').toLowerCase();
         let domain_parts = new URL(story_link.href).hostname.split(".");
         let domain = (domain_parts.length === 2) ? domain_parts[0] : domain_parts[1];
-        console.log("domain: " + domain);
         return [title, domain]
     });
 
