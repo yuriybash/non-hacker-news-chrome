@@ -4,9 +4,7 @@ chrome.runtime.sendMessage({
 });
 
 function get_threshold(filter_level) {
-    /*
-        Obtained via previous regression
-     */
+    // Obtained via previous regression
     return 0.03354 * filter_level - 0.06227
 }
 
