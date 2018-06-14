@@ -5,7 +5,7 @@ const predictor_endpoint = "https://si6k7q7byd.execute-api.us-east-1.amazonaws.c
 chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
 
   if(!(msg.from === 'content')){
-    return undefined;
+    return
   }
 
   if (msg.subject === 'showPageAction') {
