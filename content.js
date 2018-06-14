@@ -44,14 +44,17 @@ function filter_hn_stories(filter_level) {
 
 
 chrome.runtime.onMessage.addListener(function(msg) {
-    if (msg.from === 'popup') {
-        if (msg.subject === 'filterHN') {
-            filter_hn_stories(parseInt(msg.filter_level));
-        } else if (msg.subject === 'reset') {
-            let things = document.getElementsByClassName('athing');
-            for (let i = 0; i < things.length; i++) {
-                things[i].style.display = ''
-            }
+
+    if(!(msg.from === 'popup')){
+        return
+    }
+
+    if (msg.subject === 'filterHN') {
+        filter_hn_stories(parseInt(msg.filter_level));
+    } else if (msg.subject === 'reset') {
+        let things = document.getElementsByClassName('athing');
+        for (let i = 0; i < things.length; i++) {
+            things[i].style.display = ''
         }
     }
 });
