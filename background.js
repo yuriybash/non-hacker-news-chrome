@@ -21,9 +21,5 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
     xmlhttp.send(JSON.stringify({"data": msg.data}));
 
   }
-
-
   return true;
-
-
 });
