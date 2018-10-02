@@ -4,7 +4,6 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
   // First, validate the message's structure
   if ((msg.from === 'content') && (msg.subject === 'showPageAction')) {
     // Enable the page-action for the requesting tab
-    console.log("showing page action");
     chrome.pageAction.show(sender.tab.id);
   } else if((msg.from === 'content') && (msg.subject === 'filter_request')) {
 
