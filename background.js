@@ -7,7 +7,7 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
     chrome.pageAction.show(sender.tab.id);
   } else if((msg.from === 'content') && (msg.subject === 'filter_request')) {
 
-    var xmlhttp = new XMLHttpRequest();
+    let xmlhttp = new XMLHttpRequest();
     xmlhttp.open("POST", predictor_endpoint);
     xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 
