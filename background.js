@@ -4,7 +4,6 @@ const predictor_endpoint = "https://si6k7q7byd.execute-api.us-east-1.amazonaws.c
 
 chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
   if ((msg.from === 'content') && (msg.subject === 'showPageAction')) {
-    // Enable the page-action for the requesting tab
     chrome.pageAction.show(sender.tab.id);
   } else if((msg.from === 'content') && (msg.subject === 'filter_request')) {
 
