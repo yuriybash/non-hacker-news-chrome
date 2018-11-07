@@ -1,5 +1,7 @@
 'use strict';
 
+const predictor_endpoint = "https://si6k7q7byd.execute-api.us-east-1.amazonaws.com/dev"
+
 chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
   // First, validate the message's structure
   if ((msg.from === 'content') && (msg.subject === 'showPageAction')) {
@@ -8,7 +10,7 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
   } else if((msg.from === 'content') && (msg.subject === 'filter_request')) {
 
     var xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("POST", "https://si6k7q7byd.execute-api.us-east-1.amazonaws.com/dev");
+    xmlhttp.open("POST", predictor_endpoint);
     xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 
     xmlhttp.onreadystatechange = function() { // Call a function when the state changes.
