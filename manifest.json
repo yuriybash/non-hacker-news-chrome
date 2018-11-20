@@ -1,9 +1,8 @@
 {
-  "name": "Getting Started Example",
+  "name": "Non-Hacker News",
   "version": "1.0",
-  "description": "Build an Extension!",
-  "permissions": ["activeTab", "declarativeContent", "storage"],
-  "options_page": "options.html",
+  "description": "Filter out technical articles on Hacker News.",
+  "permissions": ["activeTab"],
   "background": {
     "scripts": ["background.js"],
     "persistent": false
