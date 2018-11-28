@@ -21,7 +21,6 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
     xmlhttp.open("POST", "https://si6k7q7byd.execute-api.us-east-1.amazonaws.com/dev");
     xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 
-
     xmlhttp.onreadystatechange = function() { // Call a function when the state changes.
       if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
         let predictions = JSON.parse(this.responseText)['prediction'];
