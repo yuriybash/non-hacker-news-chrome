@@ -2,15 +2,34 @@
 <html>
   <head>
     <style>
+
+      body {
+        width: 300px;
+      }
+
       button {
         height: 30px;
-        width: 30px;
+        width: 75px;
         outline: none;
       }
+
+      #a_instructions {
+        margin-top:10px;
+      }
+
+
     </style>
   </head>
   <body>
-    <button id="changeColor"></button>
-    <script src="popup.js"></script>
+  <div> Display or hide technical posts on Hacker News. </div>
+  <div id="a_instructions"> Choose filtering aggressiveness. </div>
+  <div> 10 == remove all technical posts</div>
+  <div> 1 == keep all technical posts</div>
+  <div class="slidecontainer">
+    <input name="hn_slider" type="range" min="1" max="10" value="5" class="slider" id="hn_tech_range">
+    <label for="hn_slider" id="slider_output">5</label>
+  </div>
+  <button id="changeColor">Filter</button>
+  <script src="popup.js"></script>
   </body>
 </html>
