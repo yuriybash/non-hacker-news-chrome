@@ -1,11 +1,6 @@
 'use strict';
 
 chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
-
-
-  console.log("message received in background.js. message: " + msg);
-  console.log("msg.subject: " + msg.subject);
-
   // First, validate the message's structure
   if ((msg.from === 'content') && (msg.subject === 'showPageAction')) {
     // Enable the page-action for the requesting tab
