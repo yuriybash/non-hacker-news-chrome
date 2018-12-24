@@ -5,6 +5,12 @@ chrome.runtime.sendMessage({
     subject: 'showPageAction'
 });
 
+function get_threshold(filter_level){
+    /*
+        Obtained via previous regression
+     */
+    return 0.03354*filter_level-0.06227
+}
 
 function filter_hn_stories(filter_level){
 
@@ -22,7 +28,7 @@ function filter_hn_stories(filter_level){
 
     chrome.runtime.sendMessage({from: "content", subject: "filter_request", data: titles_urls}, function(response) {
 
-        let threshold = 0.03354*filter_level-0.06227
+        let threshold = get_threshold(filter_level);
         let things = document.getElementsByClassName('athing')
 
         for(var i = 0; i < things.length; i++){
