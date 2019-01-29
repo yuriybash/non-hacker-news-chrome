@@ -28,4 +28,4 @@ These are technology-_related_ articles but not technical in nature. User-config
 
 ### Demo
 
-![Demo](https://github.com/yuriybash/non-hacker-news/raw/master/non_hn_news_preview.gif)
+![Demo](https://github.com/yuriybash/non-hacker-news-chrome/blob/master/non_hn_news_preview.gif)
