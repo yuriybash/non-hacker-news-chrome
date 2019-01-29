@@ -13,7 +13,7 @@ Many of my non-technical friends would be interested in reading these two pieces
 
 That's where Non-Hacker News comes in.
 
-I trained a [classifier model](https://github.com/yuriybash/non-hacker-news/tree/master/models) to separate technical and non-technical posts. The details of that implementation can be found in [this](https://github.com/yuriybash/non-hacker-news) repo.
+I trained a [classifier model](https://github.com/yuriybash/non-hacker-news/tree/master/models) to separate technical and non-technical posts. The details of that implementation can be found in [this](https://github.com/yuriybash/non-hacker-news) repo. This repo holds the Chrome extension code.
 
 ### Usage
 
