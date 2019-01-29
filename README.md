@@ -22,7 +22,7 @@ NHN is available as a Chrome extension, and it allows you to choose the aggressi
 A user-configurable filter level is crucial because there is a large grey area. Examples:
 
 - [FaceTime bug lets you hear audio of person you are calling before they pick up ](https://news.ycombinator.com/item?id=19022353)
-- [The 9.9 Percent Is the New American Aristocracy](https://news.ycombinator.com/item?id=17172546)
+- [	Uber Fires More Than 20 Employees in Harassment Probe](https://news.ycombinator.com/item?id=14499294)
 
 These are technology-_related_ articles but not technical in nature. User-configurable filter levels allow users to decide what they prefer to read. The model returns predicted probabilities (rather than 0/1), which allows for this type of of usage. 
 
