@@ -1,5 +1,6 @@
 {
   "name": "Non-Hacker News",
+  "short_name": "Non-Hacker News",
   "version": "0.0.0.1",
   "description": "Filter out technical articles on Hacker News.",
   "permissions": ["activeTab"],
