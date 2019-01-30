@@ -9,8 +9,7 @@ const get_threshold = function (f_level) {return 0.03354 * f_level - 0.06227};
 
 function filter_hn_stories(filter_level) {
 
-    let story_links = Array.prototype.slice.call(
-        document.getElementsByClassName('storylink'));
+    let story_links = Array.prototype.slice.call(document.getElementsByClassName('storylink'));
 
     let titles_urls = story_links.map(function(story_link) {
         let title = story_link.text.replace(/[^a-zA-Z0-9 -]/, '').toLowerCase();
@@ -29,7 +28,13 @@ function filter_hn_stories(filter_level) {
         let things = document.getElementsByClassName('athing');
 
         for (let i = 0; i < things.length; i++) {
-            things[i].style.display = (response[i][1] <= threshold) ? 'none' : DEFAULT_ELEM_STYLE;
+            const style = (response[i][1] <= threshold) ? 'none' : DEFAULT_ELEM_STYLE;
+            let thing = things[i], sib = things[i].nextElementSibling, next_sib = sib.nextElementSibling;
+
+            [thing, sib, next_sib].forEach(function(elem){
+                elem.style.display = style;
+            })
+
         }
     });
 
@@ -51,7 +56,8 @@ chrome.runtime.onMessage.addListener(function(msg) {
         let things = document.getElementsByClassName('athing');
 
         for(let thing of things){
-            thing.style.display = DEFAULT_ELEM_STYLE
+            let sib = thing.nextElementSibling, next_sib = sib.nextElementSibling;
+            thing.style.display = sib.style.display = next_sib.style.display = DEFAULT_ELEM_STYLE
         }
 
     }
