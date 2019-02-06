@@ -1,5 +1,6 @@
 'use strict';
 
+// TODO: remove. lambda limits usage so leaving it for now
 const predictor_endpoint = "https://si6k7q7byd.execute-api.us-east-1.amazonaws.com/dev";
 
 chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {

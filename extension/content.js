@@ -5,7 +5,7 @@ chrome.runtime.sendMessage({
 
 const DEFAULT_ELEM_STYLE = '';
 
-const get_threshold = function (f_level) {return 0.03354 * f_level - 0.06227};
+const get_threshold = function (f_level) {return 0.1 * f_level};
 
 function filter_hn_stories(filter_level) {
 
